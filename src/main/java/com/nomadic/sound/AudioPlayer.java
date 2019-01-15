@@ -46,7 +46,7 @@ public class AudioPlayer {
         try {
             line.open(format);
             line.start();
-            while(!stopped.get()) {
+            while(!source.drained() || !stopped.get()) {
                 play0();
             }
             line.drain();

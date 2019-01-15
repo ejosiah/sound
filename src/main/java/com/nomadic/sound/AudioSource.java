@@ -9,4 +9,8 @@ public interface AudioSource {
     }
 
     void getNextAudioBlock(AudioBuffer buffer);
+
+    boolean drained();
+
+    void repeat();
 }
